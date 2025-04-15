@@ -39,16 +39,16 @@ const Cart = () => {
         onClick={() => setIsOpen(!isOpen)}
       >
         <span className="cart-icon">🛒</span>
-        <span 
-          className="cart-count" 
-          aria-label={`${getTotalItems()} itens no carrinho`}
-        >
-          {getTotalItems()}
-        </span>
+        {getTotalItems() > 0 && (
+          <span className="cart-count">
+            {getTotalItems()}
+          </span>
+        )}
       </button>
       
       {isOpen && (
         <div className="cart-dropdown">
+          <h3>Seu Carrinho</h3>
           <div className="cart-items">
             {Array.from(items.values()).map(item => (
               <CartItem 
@@ -58,17 +58,22 @@ const Cart = () => {
                 onDecrement={removeItem}
               />
             ))}
+            {items.size === 0 && (
+              <p className="cart-empty">Seu carrinho está vazio</p>
+            )}
           </div>
           <div className="cart-total">
             <span>Total:</span>
             <span className="total-amount">R$ {getTotal()}</span>
           </div>
-          <button 
-            className="btn-primary checkout-button"
-            onClick={handleCheckout}
-          >
-            Finalizar Pedido
-          </button>
+          {items.size > 0 && (
+            <button 
+              className="checkout-button"
+              onClick={handleCheckout}
+            >
+              Finalizar Pedido
+            </button>
+          )}
         </div>
       )}
     </div>

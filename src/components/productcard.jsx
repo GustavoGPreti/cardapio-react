@@ -1,9 +1,11 @@
-import React from 'react';
-import { useState } from 'react';
+import React, { useState } from 'react';
 import './ProductCard.css';
-// Componente do Card de Produto
+
+const DEFAULT_IMAGE = 'https://via.placeholder.com/500x500?text=Imagem+não+disponível';
+
 export const ProductCard = ({ produto, onAddToCart }) => {
     const [isAdded, setIsAdded] = useState(false);
+    const [imageError, setImageError] = useState(false);
 
     const handleAddToCart = () => {
         onAddToCart(produto);
@@ -26,7 +28,11 @@ export const ProductCard = ({ produto, onAddToCart }) => {
                         ))}
                     </div>
                 )}
-                <img src={produto.imagem} alt={produto.nome} />
+                <img 
+                    src={imageError ? "/images/placeholder.jpg" : produto.imagem}
+                    alt={produto.nome}
+                    onError={() => setImageError(true)}
+                />
             </div>
             <div className="product-info">
                 <h3>{produto.nome}</h3>
@@ -34,7 +40,7 @@ export const ProductCard = ({ produto, onAddToCart }) => {
                 <div className="product-footer">
                     <div className="product-price">{produto.preco}</div>
                     <button
-                        className="btn-secondary add-to-cart"
+                        className={`btn-secondary add-to-cart ${isAdded ? 'added' : ''}`}
                         onClick={handleAddToCart}
                     >
                         {isAdded ? 'Adicionado!' : 'Adicionar'}

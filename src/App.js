@@ -16,7 +16,7 @@ const App = () => {
         <header>
           <div className="container">
             <div className="logo">
-              <img src="/img/logo/logo.jpg" alt="Logotipo da Caseirinhos Cakes" width="50" height="50" />
+              <img src="https://images.unsplash.com/photo-1571115177098-24ec42ed204d?w=500&q=80" alt="Logotipo da Caseirinhos Gustavo" width="50" height="50" />
               <h1>Caseirinhos do <span>Gustavo</span></h1>
             </div>
             
