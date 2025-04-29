@@ -6,7 +6,7 @@ import { produtos } from './components/produtos';
 import Contato from './components/contato';
 import Footer from './components/footer';
 import { useState } from 'react';
-import './styles/App.css'; // Atualizar o import do CSS
+import './styles/App.css'; 
 import './components/NavMenu.css';
 import navimg from './components/images/images.jpeg';
 
@@ -38,16 +38,18 @@ const App = () => {
 
         <main id="main-content">
           <div className="container">
-            <ProductGrid
-              products={produtos.bolos}
-              title="Nossos Bolos"
+            <ProductGrid 
+              id="bolos"
+              products={produtos.bolos} 
+              title="Nossos Bolos" 
               description="Deliciosas opções feitas com carinho para você"
               withFilters={true}
             />
-
-            <ProductGrid
-              products={produtos.bebidas}
-              title="Bebidas Refrescantes"
+            
+            <ProductGrid 
+              id="bebidas"
+              products={produtos.bebidas} 
+              title="Bebidas Refrescantes" 
               description="O complemento perfeito para suas sobremesas"
             />
           </div>
@@ -97,7 +99,7 @@ const NavMenu = () => {
           <li role="none"><a href="#bolos" role="menuitem" onClick={closeMenu}>Bolos</a></li>
           <li role="none"><a href="#bebidas" role="menuitem" onClick={closeMenu}>Bebidas</a></li>
           <li role="none"><a href="#contato" role="menuitem" onClick={closeMenu}>Contato</a></li>
-        </ul>
+        </ul> 
       </nav>
     </>
   );

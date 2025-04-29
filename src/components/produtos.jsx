@@ -23,7 +23,7 @@ export const produtos = {
             nome: "Bolo de Cenoura",
             descricao: "Bolo saboroso de cenoura com calda de chocolate da casa.",
             preco: "R$ 20,00",
-            imagem: "https://images.unsplash.com/photo-1594054129392-e40cab52e626?w=500&q=80",
+            imagem: "https://images.unsplash.com/photo-1621164078472-1d59a47f63dd?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", // Bolo de cenoura
             categoria: "tradicional"
         },
         {
@@ -58,7 +58,7 @@ export const produtos = {
             nome: "Suco de Uva",
             descricao: "Suco de uva natural, refrescante e delicioso.",
             preco: "R$ 5,00",
-            imagem: "https://images.unsplash.com/photo-1615484477778-ca3b77940c25?w=500&q=80"
+            imagem: "https://images.unsplash.com/photo-1623065422902-30a2d299bbe4?w=500&q=80", 
         },
         {
             id: "suco-abacaxi",

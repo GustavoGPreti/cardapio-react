@@ -3,7 +3,7 @@ import './ProductGrid.css';
 import { ProductCard } from './productcard';
 import { useCart } from './cartcontext';
 
-const ProductGrid = ({ products, title, description, withFilters = false }) => {
+const ProductGrid = ({ products, title, description, withFilters = false, id }) => {
     const { addItem } = useCart();
     const [filteredProducts, setFilteredProducts] = useState(products);
     const [activeCategory, setActiveCategory] = useState('todos');
@@ -37,7 +37,7 @@ const ProductGrid = ({ products, title, description, withFilters = false }) => {
     };
 
     return (
-        <section id={title.toLowerCase().replace(/\s+/g, '-')} className="menu-section">
+        <section id={id} className="menu-section">
             <div className="section-header">
                 <h2>{title}</h2>
                 <p>{description}</p>

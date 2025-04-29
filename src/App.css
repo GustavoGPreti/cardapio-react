@@ -19,6 +19,10 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: 'Poppins', sans-serif;
   background-color: var(--background-color);
@@ -229,6 +233,31 @@ body {
 .filtro-btn:hover {
   background: var(--primary-color);
   color: white;
+}
+
+.menu-section {
+  scroll-margin-top: var(--header-height);
+}
+
+#contato {
+  scroll-margin-top: var(--header-height);
+}
+
+/* Adicione estas propriedades ao header */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: white;
+  z-index: 1000;
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: var(--header-height);
 }
 
 
