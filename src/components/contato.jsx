@@ -16,7 +16,10 @@ const Contato = () => {
                     <div className="contact-info animated">
                         <div className="info-item">
                             <div className="icon">
-                                <MapPin />
+                                <MapPin 
+                                loading='lazy'
+                                
+                                />
                             </div>
                             <div className="info-text">
                                 <h3>Localização</h3>
@@ -27,7 +30,9 @@ const Contato = () => {
 
                         <div className="info-item">
                             <div className="icon">
-                                <Phone />
+                                <Phone 
+                                loading='lazy'
+                                />
                             </div>
                             <div className="info-text">
                                 <h3>WhatsApp</h3>
@@ -37,7 +42,9 @@ const Contato = () => {
 
                         <div className="info-item">
                             <div className="icon">
-                                <Mail />
+                                <Mail 
+                                loading='lazy'
+                                />
                             </div>
                             <div className="info-text">
                                 <h3>Email</h3>
@@ -47,7 +54,9 @@ const Contato = () => {
 
                         <div className="info-item">
                             <div className="icon">
-                                <Clock />
+                                <Clock 
+                                loading='lazy'
+                                />
                             </div>
                             <div className="info-text">
                                 <h3>Horários de Atendimento</h3>
@@ -58,13 +67,19 @@ const Contato = () => {
 
                         <div className="social-links">
                             <a href="#" className="social-link">
-                                <Instagram />
+                                <Instagram 
+                                loading='lazy'
+                                />
                             </a>
                             <a href="#" className="social-link">
-                                <Facebook />
+                                <Facebook 
+                                loading='lazy'
+                                />
                             </a>
                             <a href="#" className="social-link">
-                                <MessageCircle />
+                                <MessageCircle 
+                                loading='lazy'
+                                />
                             </a>
                         </div>
                     </div>

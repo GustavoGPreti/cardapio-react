@@ -32,6 +32,7 @@ export const ProductCard = ({ produto, onAddToCart }) => {
                     src={imageError ? "/images/placeholder.jpg" : produto.imagem}
                     alt={produto.nome}
                     onError={() => setImageError(true)}
+                    loading='lazy'
                 />
             </div>
             <div className="product-info">
