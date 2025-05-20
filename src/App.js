@@ -6,7 +6,7 @@ import { produtos } from './components/produtos';
 import { useState } from 'react';
 import './styles/App.css'; // Atualizar o import do CSS
 import './components/NavMenu.css';
-const ContatoExtrainfo = React.lazy(() => import('./components/contato') );
+const ContatoExtrainfo = React.lazy(() => import('./components/contato'));
 const FooterExtraInfo = React.lazy(() => import('./components/footer'));
 
 const App = () => {
@@ -18,7 +18,6 @@ const App = () => {
         <header>
           <div className="container">
             <div className="logo">
-              <img src="/img/logo/logo.jpg" alt="Logotipo da Caseirinhos Cakes" width="50" height="50" />
               <h1>Caseirinhos do <span>Gustavo</span></h1>
             </div>
 
