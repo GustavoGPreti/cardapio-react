@@ -1,11 +1,11 @@
-import React, { Suspense } from 'react';
+import React, { Suspense, useState } from 'react';
 import { CartProvider } from './components/cartcontext';
 import Cart from './components/cart';
 import ProductGrid from './components/productgrid';
 import { produtos } from './components/produtos';
-import { useState } from 'react';
-import './styles/App.css'; // Atualizar o import do CSS
+import './styles/App.css';
 import './components/NavMenu.css';
+
 const ContatoExtrainfo = React.lazy(() => import('./components/contato'));
 const FooterExtraInfo = React.lazy(() => import('./components/footer'));
 

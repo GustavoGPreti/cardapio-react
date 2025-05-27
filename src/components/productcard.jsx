@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
 import './ProductCard.css';
 
-const DEFAULT_IMAGE = 'https://via.placeholder.com/500x500?text=Imagem+não+disponível';
-
 export const ProductCard = ({ produto, onAddToCart }) => {
     const [isAdded, setIsAdded] = useState(false);
     const [imageError, setImageError] = useState(false);
